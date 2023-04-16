@@ -72,7 +72,6 @@ public class Main {
     }
 
     private static void go() {
-
         JFrame frame = new JFrame("Учет часов");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel();
@@ -84,7 +83,6 @@ public class Main {
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
         frame.setSize(400, 200);
         frame.setVisible(true);
-
     }
     public static class SendButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {

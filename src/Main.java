@@ -35,7 +35,11 @@ public class Main {
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM");
         DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm");
 
-        int different = (departure.getMinute() - arrival.getMinute()) - WORKING_TIME.getMinute();
+        int departureMin = departure.getHour() * 60 + departure.getMinute(),
+                arrivalMin = arrival.getHour() * 60 + arrival.getMinute(),
+                workTimeMin = WORKING_TIME.getHour() * 60 + WORKING_TIME.getMinute();
+
+        int different = departureMin - arrivalMin - workTimeMin;
 
         File file = Path.of("C:\\Users\\Frost\\Desktop","report.txt").toFile();
 
